@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10162b">
+  <title>{% block title %}CareerCompass AI{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="nav wrap">
+    <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">C</span><span>CareerCompass <em>AI</em></span></a>
+    <div class="nav-links"><a href="{{ url_for('home') }}">Home</a><a href="{{ url_for('assessment') }}">Assessment</a><a href="{{ url_for('history') }}">History</a></div>
+  </nav>
+  <main class="wrap main">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}<div class="flash-list">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="wrap footer"><span>CareerCompass AI</span><span>Explore possibilities. Build your path.</span></footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

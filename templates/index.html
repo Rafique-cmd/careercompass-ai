@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}CareerCompass AI — Find your direction{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> STUDENT CAREER EXPLORER</div>
+    <h1>Your future isn't a guess.<br><span>It's a path you can explore.</span></h1>
+    <p class="lead">Discover career paths that fit your interests, skills and goals. Get a transparent match score, skill suggestions and a practical learning roadmap.</p>
+    <div class="hero-actions"><a class="btn primary" href="{{ url_for('assessment') }}">Start career assessment <span>→</span></a><a class="btn secondary" href="#how-it-works">See how it works</a></div>
+    <div class="trust-row"><span>✓ Beginner-friendly</span><span>✓ No AI API required</span><span>✓ Free local prototype</span></div>
+  </div>
+  <div class="hero-art" aria-label="Career matching illustration">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>✦</span></div>
+    <div class="float-card fc-top"><span class="mini-icon violet">⌘</span><div><b>Software Developer</b><small>Logic + building</small></div><strong>↗</strong></div>
+    <div class="float-card fc-right"><span class="mini-icon mint">◈</span><div><b>Game Developer</b><small>Code + creativity</small></div></div>
+    <div class="float-card fc-bottom"><span class="mini-icon orange">▥</span><div><b>Data Analyst</b><small>Patterns + insights</small></div></div>
+    <div class="spark spark-a">✦</div><div class="spark spark-b">✧</div>
+  </div>
+</section>
+<section class="stats-grid"><div class="stat"><b>8</b><span>Career pathways</span></div><div class="stat"><b>10</b><span>Self-rating dimensions</span></div><div class="stat"><b>3</b><span>Personalized matches</span></div><div class="stat"><b>0₹</b><span>Required API cost</span></div></section>
+<section class="section" id="how-it-works"><div class="section-heading"><div class="eyebrow">A CLEAR PROCESS</div><h2>From questions to a plan.</h2><p>Understand why each career appears in your results.</p></div>
+  <div class="steps-grid"><article class="step-card"><div class="step-number">01</div><div class="step-icon">☷</div><h3>Know yourself</h3><p>Rate your interests, current confidence and preferred kinds of work.</p></article><article class="step-card"><div class="step-number">02</div><div class="step-icon">⌁</div><h3>Find your matches</h3><p>A transparent rule-based engine ranks career profiles against your answers.</p></article><article class="step-card"><div class="step-number">03</div><div class="step-icon">↗</div><h3>Take the next step</h3><p>Explore useful skills, starter projects and a roadmap for each match.</p></article></div>
+</section>
+<section class="bottom-cta"><div><div class="eyebrow">YOUR NEXT CHAPTER</div><h2>Start with curiosity.<br>Leave with a direction.</h2></div><a class="btn primary" href="{{ url_for('assessment') }}">Take the assessment →</a></section>
+<p class="disclaimer">Career matches are exploratory suggestions based on your self-ratings, not a psychological test or a guarantee of career success.</p>
+{% endblock %}

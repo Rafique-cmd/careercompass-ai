@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Career assessment — CareerCompass AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div class="eyebrow">STEP 1 OF 3 · SELF-ASSESSMENT</div><h1>Let's find your direction.</h1><p>Answer honestly. You don't need to be an expert; this is about your interests and current confidence.</p><div class="progress-track"><span style="width: 33%"></span></div></section>
+<form class="assessment-form" method="post" id="assessment-form">
+  <section class="form-panel"><div class="panel-title"><span class="panel-icon">01</span><div><h2>About you</h2><p>A little context for your report.</p></div></div>
+    <div class="field-grid"><label class="field">Your name<input name="student_name" maxlength="80" required placeholder="e.g. Alex" autocomplete="name"></label><label class="field">Education level<select name="education"><option>B.Tech 1st year</option><option>B.Tech 2nd year</option><option>B.Tech 3rd year</option><option>B.Tech 4th year</option><option>Other college student</option><option>School student</option><option>Self-learning</option></select></label></div>
+  </section>
+  <section class="form-panel"><div class="panel-title"><span class="panel-icon">02</span><div><h2>Rate your interests and confidence</h2><p>Move each slider from 1 to 5. There are no right or wrong answers.</p></div></div>
+    <div class="rating-legend"><span>1 · Not much</span><span>3 · Somewhat</span><span>5 · Very much</span></div>
+    {% for key, label in dimensions.items() %}
+    <div class="rating-row"><div class="rating-label"><label for="{{ key }}">{{ label }}</label><span class="rating-value" id="{{ key }}-value">3</span></div><input class="rating-slider" type="range" min="1" max="5" step="1" value="3" name="{{ key }}" id="{{ key }}"><div class="range-labels"><span>Low</span><span>High</span></div></div>
+    {% endfor %}
+  </section>
+  <div class="form-submit"><p>Usually takes 3–5 minutes. Your results will include the top three matches.</p><button class="btn primary" type="submit">Generate my career matches <span>→</span></button></div>
+</form>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='app.js') }}"></script>{% endblock %}

@@ -1,19 +1,126 @@
+
 {% extends 'base.html' %}
+
 {% block title %}Your career results — CareerCompass AI{% endblock %}
+
 {% block content %}
-<section class="results-header"><div><div class="eyebrow">ASSESSMENT COMPLETE · #{{ record['id'] }}</div><h1>Here are your career matches, {{ record['student_name'] }}.</h1><p>Use these as starting points to explore—not as limits on what you can become.</p></div><a class="btn secondary" href="{{ url_for('assessment') }}">Retake assessment ↻</a></section>
-<div class="result-note"><span>✦</span><div><b>How to read these scores</b><p>Scores show how your self-ratings align with the weighted profiles in this prototype. They are not probabilities of job success.</p></div></div>
+<section class="results-header">
+    <div>
+        <div class="eyebrow">
+            ASSESSMENT COMPLETE · #{{ record['id'] }}
+        </div>
+        <h1>Here are your career matches, {{ record['student_name'] }}.</h1>
+        <p>Use these as starting points to explore—not as limits on what you can become.</p>
+    </div>
+    <a class="btn secondary" href="{{ url_for('assessment') }}">
+        Retake assessment ↻
+    </a>
+</section>  
+
+<div class="result-note">
+    <span>✦</span>
+    <div>
+        <b>How to read these scores</b>
+        <p>Scores show how your self-ratings align with the weighted profiles in this prototype. They are not probabilities of job success.</p>
+    </div>
+</div>
+
 <section class="career-list">
-{% for career in results %}
-<article class="career-card {% if loop.first %}featured{% endif %}">
-  <div class="career-top"><div class="rank-badge">0{{ loop.index }}</div><div class="career-name"><h2>{{ career.name }}</h2><p>{{ career.summary }}</p></div><div class="score-ring" style="--score: {{ career.score * 3.6 }}deg"><div><b>{{ career.score }}</b><small>/100 match</small></div></div></div>
-  <div class="match-track"><span style="width: {{ career.score }}%"></span></div>
-  <div class="career-details"><div><h3>Skills to explore</h3><ul>{% for skill in career.skills %}<li>{{ skill }}</li>{% endfor %}</ul></div><div><h3>Starter project ideas</h3><ul>{% for project in career.projects %}<li>{{ project }}</li>{% endfor %}</ul></div></div>
-  {% if career.gaps %}<div class="gap-box"><h3>Possible growth areas</h3><ul>{% for gap in career.gaps %}<li><b>{{ gap.dimension }}:</b> {{ gap.suggestion }}</li>{% endfor %}</ul></div>{% endif %}
-  <details class="roadmap"><summary>View beginner roadmap <span>＋</span></summary><ol>{% for step in career.roadmap %}<li>{{ step }}</li>{% endfor %}</ol></details>
-</article>
-{% endfor %}
+    {% for career in results %}
+    <article class="career-card {% if loop.first %}featured{% endif %}">
+        <div class="career-top">
+            <div class="rank-badge">0{{ loop.index }}</div>
+
+            <div class="career-name">
+                <h2>{{ career.name }}</h2>
+                <p>{{ career.summary }}</p>
+            </div>
+
+            <div class="score-ring"
+                 style="--score: {{ career.score * 3.6 }}deg">
+                <div>
+                    <b>{{ career.score }}</b>
+                    <small>/100 match</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="match-track">
+            <span style="width: {{ career.score }}%"></span>
+        </div>
+
+        <div class="career-details">
+            <div>
+                <h3>Skills to explore</h3>
+                <ul>
+                    {% for skill in career.skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Starter project ideas</h3>
+                <ul>
+                    {% for project in career.projects %}
+                    <li>{{ project }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        {% if career.gaps %}
+        <div class="gap-box">
+            <h3>Possible growth areas</h3>
+            <ul>
+                {% for gap in career.gaps %}
+                <li>
+                    <b>{{ gap.dimension }}:</b> {{ gap.suggestion }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <details class="roadmap">
+            <summary>
+                View beginner roadmap <span>＋</span>
+            </summary>
+            <ol>
+                {% for step in career.roadmap %}
+                <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+        </details>
+
+        <!-- NEW CAREER DETAILS BUTTON -->
+        <div class="career-explore">
+            <a class="btn primary"
+               href="{{ url_for(
+                   'career_details',
+                   career_id=career.id,
+                   assessment_id=record['id']
+               ) }}">
+                Explore Companies, Salaries &amp; Skills →
+            </a>
+        </div>
+    </article>
+    {% endfor %}
 </section>
-<section class="bottom-cta"><div><div class="eyebrow">SMALL STEPS COUNT</div><h2>Pick one path to test.<br>Build something real.</h2></div><a class="btn primary" href="{{ url_for('history') }}">View saved assessments →</a></section>
-<p class="disclaimer">Your results are stored in a local SQLite database on this computer. This student prototype does not provide professional career or psychological advice.</p>
+
+<section class="bottom-cta">
+    <div>
+        <div class="eyebrow">SMALL STEPS COUNT</div>
+        <h2>Pick one path to test.<br>Build something real.</h2>
+    </div>
+    <a class="btn primary" href="{{ url_for('history') }}">
+        View saved assessments →
+    </a>
+</section>
+
+<p class="disclaimer">
+    Your results are stored in a SQLite database used by this application.
+    This student prototype does not provide professional career or psychological advice.
+</p>
 {% endblock %}
+

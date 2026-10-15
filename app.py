@@ -163,6 +163,362 @@ CAREERS = [
 ]
 
 
+CAREER_DETAILS = {
+    "software_developer": {
+        "companies": [
+            {
+                "name": "Microsoft",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹8–25 LPA",
+                    "experienced": "Approx. ₹15–45+ LPA"
+                },
+                "languages": ["C#", "C++", "Python", "JavaScript"],
+                "tools": ["Git", "SQL", "Visual Studio", "Azure"],
+                "skills": ["Data structures and algorithms", "OOP", "Debugging", "Software testing"],
+                "other": ["Problem-solving", "Software design", "Communication"],
+                "url": "https://careers.microsoft.com/"
+            },
+            {
+                "name": "Google",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹12–35+ LPA",
+                    "experienced": "Approx. ₹25–60+ LPA"
+                },
+                "languages": ["Python", "Java", "C++", "Go"],
+                "tools": ["Git", "Linux", "Testing tools"],
+                "skills": ["Data structures and algorithms", "Problem-solving", "Debugging"],
+                "other": ["Strong programming fundamentals", "Technical interview preparation"],
+                "url": "https://www.google.com/about/careers/"
+            },
+            {
+                "name": "TCS",
+                "salary": {
+                    "internship": "Varies by programme",
+                    "fresher": "Approx. ₹3.5–8 LPA",
+                    "experienced": "Approx. ₹5–18 LPA"
+                },
+                "languages": ["Java", "Python", "C++", "JavaScript"],
+                "tools": ["Git", "VS Code", "SQL"],
+                "skills": ["Programming fundamentals", "OOP", "Data structures", "SQL"],
+                "other": ["Aptitude", "Communication", "Problem-solving"],
+                "url": "https://www.tcs.com/careers"
+            }
+        ]
+    },
+
+    "game_developer": {
+        "companies": [
+            {
+                "name": "Ubisoft",
+                "salary": {
+                    "internship": "Varies by studio and programme",
+                    "fresher": "Approx. ₹3–10 LPA",
+                    "experienced": "Approx. ₹8–25 LPA"
+                },
+                "languages": ["C++", "C#", "Python"],
+                "tools": ["Unity", "Unreal Engine", "Git"],
+                "skills": ["Gameplay programming", "3D mathematics", "Game physics", "Debugging"],
+                "other": ["Playable game portfolio", "Teamwork", "Problem-solving"],
+                "url": "https://www.ubisoft.com/en-us/company/careers"
+            },
+            {
+                "name": "Electronic Arts (EA)",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹4–12 LPA",
+                    "experienced": "Approx. ₹10–30 LPA"
+                },
+                "languages": ["C++", "C#", "Python"],
+                "tools": ["Unreal Engine", "Unity", "Git", "Profiling tools"],
+                "skills": ["Game systems", "Algorithms", "Game physics", "Performance optimization"],
+                "other": ["Game projects", "Collaboration", "Debugging skills"],
+                "url": "https://www.ea.com/careers"
+            },
+            {
+                "name": "Rockstar Games",
+                "salary": {
+                    "internship": "Depends on studio and role",
+                    "fresher": "Varies; verify current India vacancies",
+                    "experienced": "Varies by role and studio"
+                },
+                "languages": ["C++", "Python", "C#"],
+                "tools": ["C++ development tools", "Git", "Game engines"],
+                "skills": ["Gameplay systems", "Algorithms", "Performance optimization"],
+                "other": ["Relevant game projects", "Programming fundamentals"],
+                "url": "https://www.rockstargames.com/careers"
+            }
+        ]
+    },
+
+    "web_developer": {
+        "companies": [
+            {
+                "name": "Amazon",
+                "salary": {
+                    "internship": "Varies by programme",
+                    "fresher": "Approx. ₹8–25+ LPA",
+                    "experienced": "Approx. ₹15–45+ LPA"
+                },
+                "languages": ["JavaScript", "TypeScript", "Java", "Python"],
+                "tools": ["React", "Git", "SQL", "AWS"],
+                "skills": ["HTML and CSS", "APIs", "Data structures", "Web security"],
+                "other": ["Responsive design", "Testing", "Problem-solving"],
+                "url": "https://www.amazon.jobs/"
+            },
+            {
+                "name": "Microsoft",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹8–25 LPA",
+                    "experienced": "Approx. ₹15–45+ LPA"
+                },
+                "languages": ["JavaScript", "TypeScript", "C#", "Python"],
+                "tools": ["React", ".NET", "Git", "Azure"],
+                "skills": ["Frontend and backend development", "APIs", "Databases"],
+                "other": ["Accessibility", "Testing", "Software design"],
+                "url": "https://careers.microsoft.com/"
+            },
+            {
+                "name": "TCS",
+                "salary": {
+                    "internship": "Varies by programme",
+                    "fresher": "Approx. ₹3.5–8 LPA",
+                    "experienced": "Approx. ₹5–18 LPA"
+                },
+                "languages": ["HTML", "CSS", "JavaScript", "Java", "Python"],
+                "tools": ["React", "Flask", "Git", "SQL"],
+                "skills": ["Responsive design", "Backend basics", "APIs", "Databases"],
+                "other": ["Debugging", "Communication", "Project experience"],
+                "url": "https://www.tcs.com/careers"
+            }
+        ]
+    },
+
+    "ai_ml_engineer": {
+        "companies": [
+            {
+                "name": "Google",
+                "salary": {
+                    "internship": "Varies by programme and location",
+                    "fresher": "Approx. ₹12–35+ LPA",
+                    "experienced": "Approx. ₹25–60+ LPA"
+                },
+                "languages": ["Python", "C++", "Java"],
+                "tools": ["TensorFlow", "PyTorch", "NumPy", "Git"],
+                "skills": ["Linear algebra", "Statistics", "Machine learning", "Algorithms"],
+                "other": ["Model evaluation", "Data preparation", "Relevant projects"],
+                "url": "https://www.google.com/about/careers/"
+            },
+            {
+                "name": "NVIDIA",
+                "salary": {
+                    "internship": "Varies by team and location",
+                    "fresher": "Approx. ₹8–30+ LPA",
+                    "experienced": "Approx. ₹18–50+ LPA"
+                },
+                "languages": ["Python", "C++", "CUDA"],
+                "tools": ["PyTorch", "CUDA", "Linux", "Git"],
+                "skills": ["Deep learning", "Linear algebra", "Parallel computing"],
+                "other": ["Programming fundamentals", "Performance optimization", "Relevant projects"],
+                "url": "https://www.nvidia.com/en-us/about-nvidia/careers/"
+            },
+            {
+                "name": "Microsoft",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹8–25 LPA",
+                    "experienced": "Approx. ₹15–45+ LPA"
+                },
+                "languages": ["Python", "C#", "C++"],
+                "tools": ["PyTorch", "Azure", "Git", "SQL"],
+                "skills": ["Machine learning", "Statistics", "Data structures"],
+                "other": ["Experimentation", "Model evaluation", "Problem-solving"],
+                "url": "https://careers.microsoft.com/"
+            }
+        ]
+    },
+
+    "data_analyst": {
+        "companies": [
+            {
+                "name": "Deloitte",
+                "salary": {
+                    "internship": "Varies by programme",
+                    "fresher": "Approx. ₹3.5–9 LPA",
+                    "experienced": "Approx. ₹7–20 LPA"
+                },
+                "languages": ["SQL", "Python", "R"],
+                "tools": ["Excel", "Power BI", "Tableau", "Pandas"],
+                "skills": ["Statistics", "Data cleaning", "Data visualization"],
+                "other": ["Analytical thinking", "Communication", "Reporting"],
+                "url": "https://www.deloitte.com/global/en/careers.html"
+            },
+            {
+                "name": "Amazon",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹5–15 LPA",
+                    "experienced": "Approx. ₹10–30 LPA"
+                },
+                "languages": ["SQL", "Python"],
+                "tools": ["Excel", "Amazon QuickSight", "Tableau", "Pandas"],
+                "skills": ["Data analysis", "Statistics", "Business metrics"],
+                "other": ["Problem-solving", "Data storytelling", "Attention to detail"],
+                "url": "https://www.amazon.jobs/"
+            },
+            {
+                "name": "TCS",
+                "salary": {
+                    "internship": "Varies by programme",
+                    "fresher": "Approx. ₹3–7 LPA",
+                    "experienced": "Approx. ₹5–15 LPA"
+                },
+                "languages": ["SQL", "Python", "R"],
+                "tools": ["Excel", "Power BI", "Tableau"],
+                "skills": ["Data cleaning", "Statistics", "Reporting"],
+                "other": ["Analytical reasoning", "Communication", "Business understanding"],
+                "url": "https://www.tcs.com/careers"
+            }
+        ]
+    },
+
+    "cybersecurity_analyst": {
+        "companies": [
+            {
+                "name": "Cisco",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹4–12 LPA",
+                    "experienced": "Approx. ₹8–25 LPA"
+                },
+                "languages": ["Python", "Bash", "PowerShell"],
+                "tools": ["Wireshark", "Linux", "SIEM tools"],
+                "skills": ["Networking", "Threat analysis", "Incident response"],
+                "other": ["Security fundamentals", "Analytical thinking", "Documentation"],
+                "url": "https://careers.cisco.com/"
+            },
+            {
+                "name": "IBM",
+                "salary": {
+                    "internship": "Varies by programme",
+                    "fresher": "Approx. ₹4–10 LPA",
+                    "experienced": "Approx. ₹8–22 LPA"
+                },
+                "languages": ["Python", "Bash", "SQL"],
+                "tools": ["Linux", "Wireshark", "SIEM tools"],
+                "skills": ["Network security", "Log analysis", "Risk assessment"],
+                "other": ["Incident investigation", "Communication", "Security awareness"],
+                "url": "https://www.ibm.com/careers"
+            },
+            {
+                "name": "Palo Alto Networks",
+                "salary": {
+                    "internship": "Varies by team and location",
+                    "fresher": "Approx. ₹6–18 LPA",
+                    "experienced": "Approx. ₹12–35 LPA"
+                },
+                "languages": ["Python", "Bash", "PowerShell"],
+                "tools": ["Linux", "SIEM tools", "Security platforms"],
+                "skills": ["Network security", "Threat detection", "Incident response"],
+                "other": ["Security fundamentals", "Problem-solving", "Continuous learning"],
+                "url": "https://jobs.paloaltonetworks.com/"
+            }
+        ]
+    },
+
+    "ui_ux_designer": {
+        "companies": [
+            {
+                "name": "Adobe",
+                "salary": {
+                    "internship": "Varies by programme and location",
+                    "fresher": "Approx. ₹5–18 LPA",
+                    "experienced": "Approx. ₹10–30 LPA"
+                },
+                "languages": ["HTML/CSS (useful)", "JavaScript (role-dependent)"],
+                "tools": ["Figma", "Illustrator", "Photoshop", "Prototyping tools"],
+                "skills": ["User research", "Wireframing", "Prototyping", "Accessibility"],
+                "other": ["Design portfolio", "Visual communication", "Usability testing"],
+                "url": "https://careers.adobe.com/"
+            },
+            {
+                "name": "Microsoft",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹6–20 LPA",
+                    "experienced": "Approx. ₹12–35 LPA"
+                },
+                "languages": ["HTML/CSS (useful)", "JavaScript (role-dependent)"],
+                "tools": ["Figma", "Prototyping tools", "Design systems"],
+                "skills": ["Interaction design", "User research", "Accessibility"],
+                "other": ["Portfolio", "Collaboration", "Explaining design decisions"],
+                "url": "https://careers.microsoft.com/"
+            },
+            {
+                "name": "Google",
+                "salary": {
+                    "internship": "Varies by programme and location",
+                    "fresher": "Approx. ₹8–25 LPA",
+                    "experienced": "Approx. ₹15–40 LPA"
+                },
+                "languages": ["HTML/CSS (useful)", "JavaScript (role-dependent)"],
+                "tools": ["Figma", "Prototyping tools", "Design systems"],
+                "skills": ["UX research", "Interaction design", "Usability testing"],
+                "other": ["Case studies", "Portfolio", "User-centered thinking"],
+                "url": "https://www.google.com/about/careers/"
+            }
+        ]
+    },
+
+    "devops_cloud": {
+        "companies": [
+            {
+                "name": "Amazon Web Services (AWS)",
+                "salary": {
+                    "internship": "Varies by programme and location",
+                    "fresher": "Approx. ₹8–25+ LPA",
+                    "experienced": "Approx. ₹15–45+ LPA"
+                },
+                "languages": ["Python", "Bash", "PowerShell"],
+                "tools": ["AWS", "Docker", "Git", "Terraform"],
+                "skills": ["Linux", "Networking", "CI/CD", "Cloud fundamentals"],
+                "other": ["Automation", "Monitoring", "Security basics"],
+                "url": "https://www.amazon.jobs/"
+            },
+            {
+                "name": "Microsoft",
+                "salary": {
+                    "internship": "Varies by role and location",
+                    "fresher": "Approx. ₹8–25 LPA",
+                    "experienced": "Approx. ₹15–45+ LPA"
+                },
+                "languages": ["Python", "PowerShell", "Bash"],
+                "tools": ["Azure", "Docker", "Git", "Kubernetes"],
+                "skills": ["Cloud infrastructure", "Networking", "CI/CD"],
+                "other": ["Automation", "Troubleshooting", "Security fundamentals"],
+                "url": "https://careers.microsoft.com/"
+            },
+            {
+                "name": "Google",
+                "salary": {
+                    "internship": "Varies by programme and location",
+                    "fresher": "Approx. ₹12–35+ LPA",
+                    "experienced": "Approx. ₹25–60+ LPA"
+                },
+                "languages": ["Python", "Go", "Bash"],
+                "tools": ["Google Cloud", "Docker", "Kubernetes", "Git"],
+                "skills": ["Linux", "Networking", "Distributed systems", "Automation"],
+                "other": ["Monitoring", "Reliability", "Troubleshooting"],
+                "url": "https://www.google.com/about/careers/"
+            }
+        ]
+    }
+}
+
+
+
 def get_db():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
@@ -366,6 +722,32 @@ def results(assessment_id):
         "results.html", record=record,
         results=json.loads(record["results_json"]),
         answers=json.loads(record["answers_json"]), dimensions=DIMENSIONS
+    )
+
+
+@app.route("/career-details/<career_id>")
+def career_details(career_id):
+    details = CAREER_DETAILS.get(career_id)
+
+    if details is None:
+        flash("Career details are not available yet.", "error")
+        return redirect(url_for("home"))
+
+    assessment_id = request.args.get("assessment_id", type=int)
+
+    return render_template(
+        "career_details.html",
+        career_id=career_id,
+        career_name=next(
+            (
+                career["name"]
+                for career in CAREERS
+                if career["id"] == career_id
+            ),
+            career_id.replace("_", " ").title()
+        ),
+        details=details,
+        assessment_id=assessment_id
     )
 
 

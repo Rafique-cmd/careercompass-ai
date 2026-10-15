@@ -1,0 +1,153 @@
+
+{% extends 'base.html' %}
+
+{% block title %}{{ career_name }} Career Guide — CareerCompass AI{% endblock %}
+
+{% block content %}
+
+<section class="results-header">
+    <div>
+        <div class="eyebrow">CAREER EXPLORER</div>
+        <h1>{{ career_name }}</h1>
+        <p>
+            Compare companies, estimated salaries, programming languages,
+            tools and skills for this career path.
+        </p>
+    </div>
+</section>
+
+<div class="result-note">
+    <span>✦</span>
+    <div>
+        <b>About this career guide</b>
+        <p>
+            Salary figures are illustrative estimates, not verified offers
+            from individual companies. Actual requirements and pay depend
+            on the job, location, experience and hiring level. Check the
+            official job description before applying.
+        </p>
+    </div>
+</div>
+
+<div class="career-list">
+
+    {% for company in details.companies %}
+
+    <article class="career-card">
+
+        <div class="career-name">
+            <h2>🏢 {{ company.name }}</h2>
+        </div>
+
+        <!-- SALARY -->
+        <div class="company-section salary-box">
+            <h3>💰 Estimated Salary in India</h3>
+
+            <p>
+                <b>Internship:</b>
+                {{ company.salary.internship }}
+            </p>
+
+            <p>
+                <b>Fresher / Entry-level:</b>
+                {{ company.salary.fresher }}
+            </p>
+
+            <p>
+                <b>Experienced:</b>
+                {{ company.salary.experienced }}
+            </p>
+
+            <small>
+                LPA means lakhs per annum. Actual compensation may include
+                fixed pay, variable pay, bonuses and stock.
+            </small>
+        </div>
+
+        <!-- PROGRAMMING LANGUAGES -->
+        <div class="company-section">
+            <h3>💻 Programming Languages</h3>
+
+            <ul>
+                {% for language in company.languages %}
+                <li>{{ language }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="company-section">
+            <h3>🛠️ Tools and Technologies</h3>
+
+            <ul>
+                {% for tool in company.tools %}
+                <li>{{ tool }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- TECHNICAL SKILLS -->
+        <div class="company-section">
+            <h3>🎯 Technical Skills</h3>
+
+            <ul>
+                {% for skill in company.skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- OTHER REQUIREMENTS -->
+        <div class="company-section">
+            <h3>📌 Other Useful Requirements</h3>
+
+            <ul>
+                {% for requirement in company.other %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- OFFICIAL CAREERS LINK -->
+        <div class="company-section">
+            <a
+                class="btn primary"
+                href="{{ company.url }}"
+                target="_blank"
+                rel="noopener noreferrer">
+                Visit Official Careers Page →
+            </a>
+        </div>
+
+    </article>
+
+    {% else %}
+
+    <article class="career-card">
+        <h2>No company information available</h2>
+        <p>Company details for this career have not been added yet.</p>
+    </article>
+
+    {% endfor %}
+
+</div>
+
+<div class="bottom-cta">
+    <div>
+        <div class="eyebrow">YOUR NEXT STEP</div>
+        <h2>Start learning. Build a project.</h2>
+    </div>
+
+    {% if assessment_id %}
+    <a class="btn primary"
+       href="{{ url_for('results', assessment_id=assessment_id) }}">
+        ← Back to my results
+    </a>
+    {% else %}
+    <a class="btn primary" href="{{ url_for('home') }}">
+        ← Back to home
+    </a>
+    {% endif %}
+</div>
+
+{% endblock %}
